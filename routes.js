@@ -3,11 +3,12 @@ const routes = express.Router();
 const controllers = require('./src/controllers');
 
 
-const homePage = routes.get('/', controllers.homeControllers.homePage);
-const homePagePost = routes.post('/test', controllers.homeControllers.treatPost);
-
+const homePage = routes.get('/', controllers.homePage);
+const lastWeights = routes.get('/lastWeights', controllers.lastWeights);
+const registerWeight = routes.post('/registerWeight', controllers.registerWeights);
 
 module.exports = {
     homePage, 
-    homePagePost
+    lastWeights, 
+    registerWeight
 }
