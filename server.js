@@ -7,7 +7,8 @@ const routes = require('./routes');
 
 app.use(express.urlencoded({ extended: true}));
 app.use(routes.homePage);
-app.use(routes.homePagePost);
+app.use(routes.lastWeights);
+app.use(routes.registerWeight);
 app.listen(port, () => {
     console.log('Backend started 😎');
     console.log(`Access in http://localhost:${port}`)
